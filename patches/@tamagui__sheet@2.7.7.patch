@@ -1,0 +1,42 @@
+diff --git a/dist/cjs/SheetImplementationCustom.native.js b/dist/cjs/SheetImplementationCustom.native.js
+index 31076e3c58598391693303370d4183c2f1361fab..2be23899e67640a94137d9f240c95600a2042c0a 100644
+--- a/dist/cjs/SheetImplementationCustom.native.js
++++ b/dist/cjs/SheetImplementationCustom.native.js
+@@ -326,8 +326,7 @@ var SheetImplementationCustom = /* @__PURE__ */import_react.default.forwardRef(f
+     if (hasntMeasured && screenSize && frameSize) {
+       at.current = screenSize;
+       animatedNumber.setValue(screenSize, {
+-        type: "timing",
+-        duration: 0
++        type: "direct"
+       }, function () {
+         syncAnimatedPosition(screenSize);
+         setTimeout(function () {
+diff --git a/dist/esm/SheetImplementationCustom.native.js b/dist/esm/SheetImplementationCustom.native.js
+index f613eee0d967b62a3c26a632cbfc2756fba59d92..5804004028bd3783a8badb91952282666cf04505 100644
+--- a/dist/esm/SheetImplementationCustom.native.js
++++ b/dist/esm/SheetImplementationCustom.native.js
+@@ -285,8 +285,7 @@ var SheetImplementationCustom = /* @__PURE__ */React.forwardRef(function SheetIm
+     if (hasntMeasured && screenSize && frameSize) {
+       at.current = screenSize;
+       animatedNumber.setValue(screenSize, {
+-        type: "timing",
+-        duration: 0
++        type: "direct"
+       }, function () {
+         syncAnimatedPosition(screenSize);
+         setTimeout(function () {
+diff --git a/dist/jsx/SheetImplementationCustom.native.js b/dist/jsx/SheetImplementationCustom.native.js
+index 31076e3c58598391693303370d4183c2f1361fab..2be23899e67640a94137d9f240c95600a2042c0a 100644
+--- a/dist/jsx/SheetImplementationCustom.native.js
++++ b/dist/jsx/SheetImplementationCustom.native.js
+@@ -326,8 +326,7 @@ var SheetImplementationCustom = /* @__PURE__ */import_react.default.forwardRef(f
+     if (hasntMeasured && screenSize && frameSize) {
+       at.current = screenSize;
+       animatedNumber.setValue(screenSize, {
+-        type: "timing",
+-        duration: 0
++        type: "direct"
+       }, function () {
+         syncAnimatedPosition(screenSize);
+         setTimeout(function () {
