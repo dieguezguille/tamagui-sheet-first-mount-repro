@@ -47,6 +47,10 @@ In `SheetImplementationCustom.native.js`:
        }, function () {
 ```
 
+This relies on the driver calling `onFinish` for `direct`. The reanimated, moti, motion and css drivers do. The 2.7.7 react-native driver does not, so with `animations-react-native` this patch alone makes the first open hang. A driver-agnostic version calls `setValue(screenSize, { type: 'direct' })` and then runs `syncAnimatedPosition` and the `setTimeout` inline, without the callback.
+
+On a device (`pnpm expo run:ios --configuration Release`), both branches open and close the sheet normally. The failure only shows up under load.
+
 ## Versions
 
 - tamagui / @tamagui/sheet / @tamagui/animations-reanimated 2.7.7. The chain is the same on `main` and in 3.0.0-beta.1479.1.
